@@ -1,4 +1,4 @@
-<img src="https://books.google.se/books/content?id=6nuUCgAAQBAJ&printsec=frontcover&img=1&zoom=1&h=160&stbn=1" alt="" style="float:left;margin:0 10px 10px;">
+<img src="https://books.google.se/books/content?id=6nuUCgAAQBAJ&printsec=frontcover&img=1&zoom=1&h=160&stbn=1" alt="" style="float:right;margin:0 0 10px 10px;">
 
 Den rekommenderade kurslitteraturen är, [Essential C# 6.0](https://books.google.se/books?id=6nuUCgAAQBAJ) av Mark Michaelis och Eric Lippert, ISBN 978-0-134-17613-0. 
 
