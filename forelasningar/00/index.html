@@ -1,1 +1,193 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>00 - Introduktion - Objektorienterad programmering (1DV024)</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="../remark/images/favicon.png" type="image/png">
+        <style>
+        @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
 
+        .remark-code, .remark-inline-code {
+            font-family: 'Ubuntu Mono';
+        }
+    </style>
+    <link rel="stylesheet" href="../remark/stylesheets/lnu.dark.css" id="theme">
+</head>
+<body class="lnu">
+<textarea id="source">
+
+        class: center, middle, lnu-background-yellow
+
+        ### Objektorienterad programmering (1DV024)
+        # Introduktion
+
+        <div class="lnu-footer">
+            <img src="../remark/images/lnu-logotype.png">
+            <img src="../remark/images/lnu-symbol.png">
+        </div>
+
+        ---
+
+        class: lnu-background-cc
+
+        ##Upphovsrätt för detta verk
+    
+        Detta verk är framtaget av Mats Loock i anslutning till kursen Objektorienterad programmering (1DV024) vid Linnéuniversitetet.
+    
+        Allt innehåll i detta verk förutom fotografier, ikoner, bild på kurslitteraturen samt Linnéuniversitetets logotyp och symbol, 
+        är licensierad under en <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+        <img alt="Creative Commons-licens" style="border-width:0;vertical-align:middle" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /> Creative Commons Erkännande 4.0 Internationell Licens</a>.</p>
+        ####Du får använda detta verk så här
+        - kopiera hela eller delar av innehållet
+        - sprida hela eller delar av innehållet
+        - visa hela eller delar av innehållet offentligt och digitalt
+        - konvertera innehållet till annat format
+        - du får även göra om innehållet
+
+        Om du förändrar innehållet så ta inte med fotografier, ikoner, bild på kurslitteraturen samt Linnéuniversitetets logotyp och symbol i din nya version!
+
+        Vid all användning måste du ange källan: ”Linnéuniversitetet – Objektorienterad programmering (1DV024)” och en länk till https://coursepress.lnu.se/kurs/objektorienterad-programmering och till Creative Common-licensen här ovan.
+        
+        ---
+
+        ## Kursledningen
+    
+        <img class="grayscale border" src="http://www.gravatar.com/avatar/a334470b8e87eb204a337c228f940e13.jpg?s=80" alt="Mats"> Mats Loock (kursansvarig/kursledare)
+
+        <img class="grayscale border" src="https://s.gravatar.com/avatar/a6fd6e690638679121586488e0c0c82e?s=80" alt="Anne"> Anne Norling (kursansvarig/kursledare)
+        
+        ---
+    
+        ##...och som vanligt är kursledningen inte gudar...
+    
+        <blockquote>
+            <p>“He who can, does.</p>
+            <p>He who cannot, teaches.“</p>
+
+            <footer>
+                Man and Superman (1903) "Maxims for Revolutionists" <br />
+                George Bernard Shaw
+            </footer>
+        </blockquote>
+
+        ##...men å andra sidan...
+
+        <blockquote>
+            <p>“Those who can, do.</p>
+            <p>Those who can do more, teach.“</p>
+
+            <footer>
+                Okänd
+            </footer>
+        </blockquote>
+    
+        ---
+        
+        ##Efter kursen kommer du att...
+    
+        - ...
+        - ...
+
+        ---
+
+        ##Kurslitteratur
+
+        <img class="grayscale border"src="https://books.google.se/books/content?id=6nuUCgAAQBAJ&printsec=frontcover&img=1&zoom=1&h=160&stbn=1" style="float:right;margin:0 0 10px 10px;" />
+
+        -  Essential C# 6.0 av Mark Michaelis och Eric Lippert, ISBN 978-1593275846.
+        - …en bra bok, som du självklart får använda under examinationerna!
+        - Kursen bygger på och följer i stort kurslitteraturen. Endast kompletterande material 
+          kommer att finnas att tillgå, som på inget sätt kan ersätta kurslitteraturen.
+    
+        ---
+    
+        ##Upplägg
+        - Kursen är indelad i tre delar där varje del...
+         - ...har ett antal laborationsuppgifter som är förberedande för...
+         - ...den, för varje del, avslutande individuella examinationsuppgiften.
+        - Teorin som varje del omfattar examineras individuellt och muntligen med utgångspunkt från 
+          examinationsuppgifterna. Det är med andra ord totalt tre ordinarie examinationstillfällen.
+        - Schemalagd verksamhet
+         - Föreläsningar (7 st á 2 h)
+         - "Peer instructions" (2 st á 2 h)
+         - Handledningstillfällen (10 st á 1 h)
+         - Examinsationstillfällen (3 st á 30 min/kursdeltagare)
+    
+        ---
+    
+        ##Viktiga datum och tider
+    
+        - Alla datum och tider hittar du i schemat.
+         - ...och ja det är viktigt att du deltar aktivt under läraktiviteterna.
+
+        ####VIKTIGA!
+        - "Peer Instructions"
+         - ~~21/9 13:15-15:00~~
+         - ~~12/10 13:15-15:00~~
+
+        ####EXTRAORDINÄRT VIKTIGA!
+        - Muntlig examination
+         - ~~24/9 - 25/9 8:00-17:00~~
+         - ~~15/10 - 16/10 8:00-17:00~~
+         - ~~29/10 - 30/10 8:00-17:00~~
+    
+        ---
+    
+        <blockquote>
+            <p>“Education is not received. It is achieved.“</p>
+            <footer>
+                Okänd
+            </footer>
+        </blockquote>
+
+        <blockquote>
+            <p>“Learning is not a spectator sport.“</p>
+            <footer>
+                Okänd
+            </footer>
+        </blockquote>
+
+        <blockquote>
+            <p>“Don't be afraid to ask questions. Don't be afraid to ask for help 
+            when you need it. I do that every day. Asking for help isn't a sign of 
+            weakness, it's a sign of strength. It shows you have the courage to 
+            admit when you don't know something, and then allows you to learn 
+            something new.“</p>
+            <footer>
+                Barak Obama
+            </footer>
+        </blockquote>
+    
+        ---
+        
+        ##Del 1
+        
+        ...
+
+        ---
+
+        ##Del 2
+
+        ...
+    
+        ---
+
+        ##Del 3
+
+        ...
+    
+        ---
+    
+        ##Utvecklingsmiljö
+    
+        - Visual Studio Enterprise 2015
+        - Git
+
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+    </script>
+    <script>
+        var slideshow = remark.create({ ratio: "16:9" });
+    </script>
+</body>
+</html>
