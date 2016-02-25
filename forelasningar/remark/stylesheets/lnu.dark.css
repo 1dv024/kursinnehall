@@ -37,6 +37,7 @@
         font-size: 2.4em;
         font-weight: bold;
         letter-spacing: 0.05em;
+        margin-top: 0;
     }
 
     .remark-slide-content h2 {
@@ -67,6 +68,10 @@
     transition: opacity 0.5s ease-out;
     opacity: 1;
 }*/
+
+.lnu a {
+    color: #6495ed;
+}
 
 .lnu blockquote {
     display: block;
@@ -159,8 +164,7 @@
     text-align: left;
     position: absolute;
     bottom: 12px;
-    left: 20px;
-    width: 100%;
+    width: 85%;
 }
 
     .lnu-footer img {
@@ -172,6 +176,10 @@
             position: absolute;
             right: 0;
         }
+
+    .lnu-footer + .remark-slide-number {
+        display: none;
+    }
 
 .lnu .sh .hljs-comment {
     color: #f8f8f8;
