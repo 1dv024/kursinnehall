@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../remark/stylesheets/lnu.dark.css" id="theme">
 </head>
 <body class="lnu">
-    <textarea id="source">
+<textarea id="source">
 
         class: center, middle, lnu-background-yellow
 
@@ -93,6 +93,111 @@
         >Program
         Hello, World!
         ```
+        ???
+
+        - Känn igen syntaxen från JavaScript.
+        - Semikolon, klammerparenteser, känslig för stora och små bokstäver, nyckelord.
+        - All kod måste skrivas i klasser och i metoder. 
+        - Källkoden måste kompileras, översättas till CIL-kod som sedan kan kompileras och exekveras.
+            1. Kompilatorn översätter källkoden till CIL-kod och skapar en assembly, Program.exe.
+            2. Vid exekvering av en assembly kompileras koden av en JIT-kompilator som genererar "native"-kod för CPUn.
+            3. CPUn exekverar "native"-koden.
+
+        ---
+    
+        # Nyckelord och identifierare
+    
+        - <a href="https://msdn.microsoft.com/en-us/library/x53a06bb.aspx">Nyckelord</a> är fördefinierade, reserverade identifierare som har speciell innebörd för kompilatorn.
+            - ```abstract```, ```as```, ```base```, ```bool```, ```break```, ```byte```, ```case```, ```catch```, ```char```, ```checked```, ```class```, ```const```, ```continue```, ```decimal```, ```default```, ```delegate```, ```do```, ```double```, ```else```, ```enum```, ```event```, ```explicit```, ```extern```, ```false```, ```finally```, ```fixed```, ```float```, ```for```, ```foreach```, ```goto```, ```if```, ```implicit```, ```in```, ```in``` (generic modifier), ```int```, ```interface```, ```internal```, ```is```, ```lock```, ```long```, ```namespace```, ```new```, ```null```, ```object```, ```operator```, ```out```, ```out``` (generic modifier), ```override```, ```params```, ```private```, ```protected```, ```public```, ```readonly```, ```ref```, ```return```, ```sbyte```, ```sealed```, ```short```, ```sizeof```, ```stackalloc```, ```static```, ```string```, ```struct```, ```switch```, ```this```, ```throw```, ```true```, ```try```, ```typeof```, ```uint```, ```ulong```, ```unchecked```, ```unsafe```, ```ushort```, ```using```, ```virtual```, ```void```, ```volatile```, ```while```
+            - ```add```, ```alias```, ```ascending```, ```async```, ```await```, ```descending```, ```dynamic```, ```from```, ```get```, ```global```, ```group```, ```into```, ```join```, ```let```, ```orderby```, ```partial``` (type), ```partial``` (method), ```remove```, ```select```, ```set```, ```value```, ```var```, ```where``` (generic type constraint), ```where``` (query clause), ```yield```
+        - Du kan inte använda nyckelord som <code>class</code> som identifierare, d.v.s. som namn på t.ex. en variabel eller metod.
+            - <del>(Du kan inleda namnet med @. ```@class``` är en giltig identifierare.)</del> <small>Kan dock vara användbart i vissa sammanhang...</small>
+        - Två sätt att formatera identifierare:
+            - PascalCase - klassnamn, metodnamn
+            - camelCase - variabelnamn
+
+        ---
+    
+        # Typdefinition
+    
+        - All exekveringsbar kod måste vara inuti en typdefinition, där den vanligaste är en klassdefinition.
+            - En typdefinition per källkodsfil, som namnges som typen (ex. ```Program.cs```).
+            - ```class``` innebär att typdefinitionen är en klassdefinition.
+            - ```Program``` är typens namn.
+            - ```{}``` mellan klammerparenteserna skrivs klassens medlemmar, t.ex. metoder.
+
+        ```
+        class Program
+        {
+            // ...
+        }
+        ```
+    
+        - En klassdefinition innehåller typiskt <a href="https://msdn.microsoft.com/en-us/library/ms173114.aspx">metoder</a>.
+            - ```static``` innebär att metoden är <a href="https://msdn.microsoft.com/en-us/library/98f28cdx.aspx">statisk</a> och måste anropas via klassens namn, och inte via en referens till ett objekt.
+            - ```void``` innebär att metoden inte returnerar något värde.
+            - ```Main``` är metodens namn (speciell innebörd då det är applikationens startpunkt).
+            - ```()``` tom parameterlista.
+            - ```{}``` mellan klammerparenteserna skrivs metodens kropp.
+
+        ```
+        class Program
+        {
+            static void Main()
+            {
+                // ...
+            }
+        }
+        ```
+    
+        ???
+    
+        ```
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                SayHello();
+                SayHi();
+            }
+
+            static void SayHello()
+            {
+                Console.WriteLine("Hello!");
+            }
+    
+            // Expression Body Definition
+            static void SayHi() => Console.WriteLine("Hi!");
+        }
+        ```
+
+        ---
+    
+        # Lokala variabler och  datatyper
+        
+        - En variabel håller ett värde av en specifik typ.
+        - Du måste deklarera en variabel innan den används.
+            - Specifiera dess typ.
+            - Ge den ett namn (camelCase).
+            - (Initiera den med ett värde.)
+        - En variabels räckvidd (eng. "_scope_") bestäms av blocket den är deklarerad i.
+
+        ```
+        class Program
+        {
+            static void Main()
+            {
+                int meaningOfLife = 42;
+    
+                Console.WriteLine("Meningen med livet är ${meaningOfLife}.")
+            }
+        }
+        ```
+        - Inbyggda <a href="https://msdn.microsoft.com/en-us/library/ya5y69ds.aspx">datatyper</a>
+            - ```bool```, ```byte```, ```sbyte```, ```char```, ```decimal```, ```double```, ```float```, ```int```, ```uint```, ```long```, ```ulong```, ```object```, ```short```, ```ushort```, ```string```
+            - ```int``` är standardtypen för heltal.
+            - ```double``` är standardtypen för flyttal.
+        
     </textarea>
     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
     </script>
