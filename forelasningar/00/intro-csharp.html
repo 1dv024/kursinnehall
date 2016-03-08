@@ -59,6 +59,7 @@
         - Annat värt(?) att veta?
             - Presenterades sommaren 2000.
             - Utvecklat av Microsoft som en del av .NET-plattformen.
+                - Base Class Library (BCL), en del av Framework Class Library, innehåller det  mest grundläggande för .NET Framework.
             - Standardiserat (ECMA-334)
             - ...
 
@@ -108,8 +109,8 @@
         # Nyckelord och identifierare
     
         - <a href="https://msdn.microsoft.com/en-us/library/x53a06bb.aspx">Nyckelord</a> är fördefinierade, reserverade identifierare som har speciell innebörd för kompilatorn.
-            - ```abstract```, ```as```, ```base```, ```bool```, ```break```, ```byte```, ```case```, ```catch```, ```char```, ```checked```, ```class```, ```const```, ```continue```, ```decimal```, ```default```, ```delegate```, ```do```, ```double```, ```else```, ```enum```, ```event```, ```explicit```, ```extern```, ```false```, ```finally```, ```fixed```, ```float```, ```for```, ```foreach```, ```goto```, ```if```, ```implicit```, ```in```, ```in``` (generic modifier), ```int```, ```interface```, ```internal```, ```is```, ```lock```, ```long```, ```namespace```, ```new```, ```null```, ```object```, ```operator```, ```out```, ```out``` (generic modifier), ```override```, ```params```, ```private```, ```protected```, ```public```, ```readonly```, ```ref```, ```return```, ```sbyte```, ```sealed```, ```short```, ```sizeof```, ```stackalloc```, ```static```, ```string```, ```struct```, ```switch```, ```this```, ```throw```, ```true```, ```try```, ```typeof```, ```uint```, ```ulong```, ```unchecked```, ```unsafe```, ```ushort```, ```using```, ```virtual```, ```void```, ```volatile```, ```while```
-            - ```add```, ```alias```, ```ascending```, ```async```, ```await```, ```descending```, ```dynamic```, ```from```, ```get```, ```global```, ```group```, ```into```, ```join```, ```let```, ```orderby```, ```partial``` (type), ```partial``` (method), ```remove```, ```select```, ```set```, ```value```, ```var```, ```where``` (generic type constraint), ```where``` (query clause), ```yield```
+            - <span style="font-size:smaller">```abstract```, ```as```, ```base```, ```bool```, ```break```, ```byte```, ```case```, ```catch```, ```char```, ```checked```, ```class```, ```const```, ```continue```, ```decimal```, ```default```, ```delegate```, ```do```, ```double```, ```else```, ```enum```, ```event```, ```explicit```, ```extern```, ```false```, ```finally```, ```fixed```, ```float```, ```for```, ```foreach```, ```goto```, ```if```, ```implicit```, ```in```, ```in``` (generic modifier), ```int```, ```interface```, ```internal```, ```is```, ```lock```, ```long```, ```namespace```, ```new```, ```null```, ```object```, ```operator```, ```out```, ```out``` (generic modifier), ```override```, ```params```, ```private```, ```protected```, ```public```, ```readonly```, ```ref```, ```return```, ```sbyte```, ```sealed```, ```short```, ```sizeof```, ```stackalloc```, ```static```, ```string```, ```struct```, ```switch```, ```this```, ```throw```, ```true```, ```try```, ```typeof```, ```uint```, ```ulong```, ```unchecked```, ```unsafe```, ```ushort```, ```using```, ```virtual```, ```void```, ```volatile```, ```while```</span>
+            - <span style="font-size:smaller">```add```, ```alias```, ```ascending```, ```async```, ```await```, ```descending```, ```dynamic```, ```from```, ```get```, ```global```, ```group```, ```into```, ```join```, ```let```, ```orderby```, ```partial``` (type), ```partial``` (method), ```remove```, ```select```, ```set```, ```value```, ```var```, ```where``` (generic type constraint), ```where``` (query clause), ```yield```</span>
         - Du kan inte använda nyckelord som <code>class</code> som identifierare, d.v.s. som namn på t.ex. en variabel eller metod.
             - <del>(Du kan inleda namnet med @. ```@class``` är en giltig identifierare.)</del> <small>Kan dock vara användbart i vissa sammanhang...</small>
         - Två sätt att formatera identifierare:
@@ -117,9 +118,9 @@
             - camelCase - variabelnamn
 
         ---
-    
+
         # Typdefinition
-    
+
         - All exekveringsbar kod måste vara inuti en typdefinition, där den vanligaste är en klassdefinition.
             - En typdefinition per källkodsfil, som namnges som typen (ex. ```Program.cs```).
             - ```class``` innebär att typdefinitionen är en klassdefinition.
@@ -132,7 +133,7 @@
             // ...
         }
         ```
-    
+
         - En klassdefinition innehåller typiskt <a href="https://msdn.microsoft.com/en-us/library/ms173114.aspx">metoder</a>.
             - ```static``` innebär att metoden är <a href="https://msdn.microsoft.com/en-us/library/98f28cdx.aspx">statisk</a> och måste anropas via klassens namn, och inte via en referens till ett objekt.
             - ```void``` innebär att metoden inte returnerar något värde.
@@ -149,9 +150,9 @@
             }
         }
         ```
-    
+
         ???
-    
+
         ```
         class Program
         {
@@ -165,17 +166,18 @@
             {
                 Console.WriteLine("Hello!");
             }
-    
+
             // Expression Body Definition
             static void SayHi() => Console.WriteLine("Hi!");
         }
         ```
 
         ---
-    
+
         # Lokala variabler och  datatyper
-        
+
         - En variabel håller ett värde av en specifik typ.
+            - heltal, flyttal, sträng, ...
         - Du måste deklarera en variabel innan den används.
             - Specifiera dess typ.
             - Ge den ett namn (camelCase).
@@ -188,8 +190,8 @@
             static void Main()
             {
                 int meaningOfLife = 42;
-    
-                Console.WriteLine("Meningen med livet är ${meaningOfLife}.")
+
+                System.Console.WriteLine("Meningen med livet är ${meaningOfLife}.")
             }
         }
         ```
@@ -197,8 +199,119 @@
             - ```bool```, ```byte```, ```sbyte```, ```char```, ```decimal```, ```double```, ```float```, ```int```, ```uint```, ```long```, ```ulong```, ```object```, ```short```, ```ushort```, ```string```
             - ```int``` är standardtypen för heltal.
             - ```double``` är standardtypen för flyttal.
+    
+        ---
+    
+        # Typomvandling
+    
+        - Implicit (automatisk)
+
+        ```
+        int foo = 42;
+        double bar = foo; //  42.0
+    
+        int qux = "Hej!"; // Error CS0029 Cannot implicitly convert type 'string' to 'int'
+    
+        bar = 3.14;
+        foo = bar; // Error CS0266 Cannot implicitly convert type 'double' to 'int'. An explicit conversion exists (are you missing a cast?)
+        ```
+        - Explicit (uttrycklig)
+
+        ```
+        double bar = 2.72;
+        int foo = (int)bar; // 2
+    
+        int qux = (int)"273.15"; // Error CS0030 Cannot convert type 'string' to 'int'
+
+        ```
+    
+        - Tolka ett värde till ett annat
+
+        ```
+        int foo;
+        if (int.TryParse("42", out foo))
+        {
+            Console.WriteLine(foo);
+        }
+    
+        double bar;
+        bar = double.Parse("273.15");
+        bar = Convert.ToDouble("273.15");
+        ```
         
-    </textarea>
+        ???
+    
+        Eftersom C# är starkt typat kan inte en variabel deklareras om eller användas till att lagra värden av annan typ
+        om inte värdet kan omvandlas till vairabelns typ.
+        
+        ---
+    
+        # Arrayer
+    
+        - Iterera en array
+
+        ```
+        int[] values = { 1, 2, 3, 4, 5 };
+
+        for (int i = 0; i < values.Length; i++)
+        {
+            values[i] += 3;
+            Console.WriteLine(values[i]);
+        }
+
+        foreach (int value in values)
+        {
+            value += 3; // Error CS1656 Cannot assign to 'value' because it is a 'foreach iteration variable'
+            Console.WriteLine(value);
+        }
+        ```
+        
+        - Filtrera en array med metodbaserad fråga
+
+        ```
+        int[] values = { 1, 2, 3, 4, 5 };
+
+        int[] filtered = values
+            .Where(x => x % 2 != 0)
+            .ToArray();
+        
+        Console.WriteLine(string.Join(", ", filtered)); // 1, 3, 5
+        ```
+
+        ---
+    
+        # Anonyma typer
+        
+        - Anonyma typer kan användas för att kapsla in "read-only" egenskaper utan att du behöver definiera en typ först.
+    
+        ```
+        var person = new { Name = "Ellen Nu", Age = 6 };
+
+        Console.WriteLine($"{person.Name} är {person.Age} år.");
+
+        person.Age = 42;  // Error CS0200 Property or indexer '<anonymous type string Name, int Age>.Age' cannot be assigned to --it is read only
+    
+        person = "Nisse"; // Error CS0029 Cannot implicitly convert type 'string' to '<anonymous type string Name, int Age>'
+
+        ```
+        
+        - Typen ```dynamic``` används som returtyp då en metod returnerar ett objekt av anonym typ.
+
+        ```
+        static void Main(string[] args)
+        {
+            var person = GetPerson();
+
+            Console.WriteLine($"{person.Name} är {person.Age} år.");
+        }
+
+        static dynamic GetPerson()
+        {
+            return new { Name = "Ellen Nu", Age = 6 };
+        }
+        ```
+
+</textarea>
     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
     </script>
     <script>
@@ -206,7 +319,12 @@
             ratio: "16:9",
             highlightLanguage: "C#",
             highlightStyle: "ir-black",
-            highlightLines: true
+            highlightLines: true,
+            navigation: {
+                scroll: true,
+                touch: false,
+                click: false
+            }
         });
     </script>
 </body>
