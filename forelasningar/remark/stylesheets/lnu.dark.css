@@ -184,3 +184,25 @@
 .lnu .sh .hljs-comment {
     color: #f8f8f8;
 }
+
+code.csharp.hljs {
+    background-color: #0e1e1e;
+    color: #dcdcdc;
+    width: 80%;
+}
+
+    code.csharp .hljs-keyword {
+        color: #569cd6;
+    }
+
+    code.csharp  .hljs-number {
+        color: #b5cea8;
+    }
+
+    code.csharp  .hljs-string {
+        color: #d69d85;
+    }
+
+    code.csharp .hljs-comment {
+        color: #608b4e;
+    }
