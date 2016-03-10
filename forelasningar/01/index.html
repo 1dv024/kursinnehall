@@ -112,6 +112,41 @@
         ```
 
         ---
+
+        # Styrstrukturer
+
+        - Selektioner
+            - <code class="remark-inline-code">if</code>-satsen
+            - <code class="remark-inline-code">switch</code>-satsen
+
+        ```
+        int number;
+
+        if (int.TryParse(Console.ReadLine(), out number) && number % 2 == 1)
+        {
+            Console.WriteLine($"Heltalet {number} är udda.");
+        }
+        ```
+
+        - Iterationer
+            - <code class="remark-inline-code">while</code>-satsen
+            - <code class="remark-inline-code">do while</code>-satsen
+            - <code class="remark-inline-code">for</code>-satsen
+            - <code class="remark-inline-code">foreach</code>-satsen
+
+        ```
+        int[] numbers = Enumerable.Range(1, 1000).ToArray();
+
+        foreach (int element in numbers)
+        {
+            Console.WriteLine(element);
+        }
+        Console.WriteLine(element); // Error CS0103 The name 'element' does not exist in the current context
+
+
+        ```
+
+
 </textarea>
 <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
 </script>
@@ -119,7 +154,7 @@
     var slideshow = remark.create({
         ratio: "16:9",
         highlightLanguage: "csharp",
-        highlightStyle: "vs",
+//        highlightStyle: "Vs",
         highlightLines: true,
         navigation: {
             scroll: true,
