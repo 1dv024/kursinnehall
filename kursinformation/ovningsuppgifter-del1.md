@@ -35,5 +35,6 @@
 >- Hur du läser en textfil rad för rad.
 >- Hur du använder ```using``` för att automatiskt stänga en fil.
 
-**[Rita med asterisker (A-, B- och C-nivå)](https://github.com/1dv024/exercise-stars-stripes-and-diamonds)** är en "tre-stegsuppgift" där du kan skriva ett program på varierande kravnivåer. Försök nå den avancerade C-nivån, som erbjuder mest utmaning!
+**[Rita med asterisker (A-, B- och C-nivå)](https://github.com/1dv024/exercise-stars-stripes-and-diamonds)** 
+>- En "tre-stegsuppgift" där du kan skriva ett program på varierande kravnivåer. Försök nå den avancerade C-nivån, som erbjuder mest utmaning!
 
