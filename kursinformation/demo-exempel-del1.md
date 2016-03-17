@@ -20,7 +20,9 @@ Korta exempel på enklare programlösningar eller kod som demonstrerats under f�
 
 >En något mer komplex refaktorisering med mer avancerad typ av parameterpassning.
 
-**...**
+**[Test scores](https://github.com/1dv024/example-test-scores)**
+
+>Skapar statistik från data i .csv-fil. Klassen ```List``` demonstreras, liksom alternativ med Lambda- och LINQ-uttryck. 
 
 **[12 bottles of whiskey...](https://github.com/1dv024/example-using-files)**
 
