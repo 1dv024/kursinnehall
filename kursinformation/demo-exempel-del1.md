@@ -16,6 +16,11 @@ Korta exempel på enklare programlösningar eller kod som demonstrerats under f�
 
 >Enkelt program som refaktoriserats i flera metoder.
 
+
+**[Count vowels in sayings](https://github.com/1dv024/example-count-vowels-in-sayings)**
+
+>Något mer komplex refaktorisering med mer avancerad typ av parameterpassning.
+
 **...**
 
 **[12 bottles of whiskey...](https://github.com/1dv024/example-using-files)**
