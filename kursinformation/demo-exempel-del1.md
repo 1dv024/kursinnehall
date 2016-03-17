@@ -6,16 +6,18 @@ Korta exempel på enklare programlösningar eller kod som demonstrerats under f�
 
 **[Multiplication table](https://github.com/1dv024/example-multiplication-table)**
 
->... med användning av nästlade ```for```-loopar och formatfält.
+>Rad- och kolumn-matris med användning av nästlade ```for```-loopar och formatfält.
 
 **[Introducing methods](https://github.com/1dv024/example-introducing-methods)**
 
 >Ett något utvecklat kodexempel från kurslitteraturens kapitel 4 (Essential C# 6.0).
+
+**[What Ascii - refactored](https://github.com/1dv024/example-what-ascii-refactored)**
+
+>Enkelt program som refaktoriserats i flera metoder.
 
 **...**
 
 **[12 bottles of whiskey...](https://github.com/1dv024/example-using-files)**
 
 >Ett "simpelt" exempel på FIL-hantering med fyra varianter av FEL-hantering i sammanhanget.
-
-**...**
