@@ -29,8 +29,7 @@
 
 **[Sista meddelandet från Titanic](https://github.com/1dv024/exercise-last-message-from-titanic)** behandlar:
 
-> Hur du öppnar en textfil för läsning.<br />
-> Hur du läser en textfil rad för rad.<br />
+> Hur du öppnar och läser en textfil rad för rad.<br />
 > Hur du använder ```using``` för att automatiskt stänga en fil.
 
 **[Hur många gånger förekommer orden?](https://github.com/1dv024/exercise-frequency-of-words)** behandlar:
