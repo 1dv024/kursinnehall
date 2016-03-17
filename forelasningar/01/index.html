@@ -115,9 +115,12 @@
 
         # Styrstrukturer
 
+        - Villkorsuttryck måste __alltid__ vara ett booleskt uttryck.
+
+
         - Selektioner
             - <code class="remark-inline-code">if</code>-satsen
-            - <code class="remark-inline-code">switch</code>-satsen
+            - [<code class="remark-inline-code">switch</code>](https://msdn.microsoft.com/en-us/library/06tc147t.aspx)-satsen
 
         ```
         int number;
@@ -132,7 +135,7 @@
             - <code class="remark-inline-code">while</code>-satsen
             - <code class="remark-inline-code">do while</code>-satsen
             - <code class="remark-inline-code">for</code>-satsen
-            - <code class="remark-inline-code">foreach</code>-satsen
+            - [<code class="remark-inline-code">foreach</code>](https://msdn.microsoft.com/en-us/library/ttw7t8t6.aspx)-satsen
 
         ```
         int[] numbers = Enumerable.Range(1, 1000).ToArray();
@@ -142,11 +145,98 @@
             Console.WriteLine(element);
         }
         Console.WriteLine(element); // Error CS0103 The name 'element' does not exist in the current context
-
-
         ```
 
+        ???
 
+        - break
+        - continue
+        - switch
+            - fall through
+            - goto
+
+        ---
+
+        # Felhantering
+
+        - En metod kan skicka information om ett fel genom att kasta ett undantag.
+
+        ```
+        static int ReadOddInt()
+        {
+            int number;
+
+            if (!int.TryParse(Console.ReadLine(), out number) || number % 2 != 1)
+            {
+                throw new ApplicationException("Inte ett udda heltal.");
+            }
+
+            return number;
+        }
+        ```
+
+        - Ett undantag kan fångas och hanteras.
+
+        ```
+        double number;
+
+        try
+        {
+            Console.Write("Ange ett flyttal: ");
+            number = double.Parse(Console.ReadLine());
+            Console.WriteLine($"Du matade in {number}.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+        finally
+        {
+            Console.WriteLine("Ett finally-block exekveras alltid!");
+        }
+        ```
+
+        ???
+        - short circuit evaluation
+        - out
+        - finally
+
+        ---
+
+        # Olika hantering beroende av fel
+
+        - Det är möjligt att ha flera ```catch```-block i en och samma ```try-catch```-sats.
+        - Ordningen är viktig!
+        - (Klassen Exception är basklass för alla övriga typer av undantag.)
+
+        ```
+        byte number;
+
+        try
+        {
+            Console.Write("Ange ett tal i det slutna intervallet mellan 0 och 255: "); // IOExeption
+            number = byte.Parse(Console.ReadLine());  // ArgumentNullExecption, FormatException, OverflowException
+                                                      // IOExeption, OutOfMemoryException, ArgumentOutOfRangeException
+            Console.WriteLine($"Du matade in talet {number}."); // IOExeption
+        }
+        catch (OverflowException)
+        {
+            Console.WriteLine("Talet är antingen för stort eller för litet.");
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("Det inmatade är inte i ett korrekt format.");
+        }
+        catch (Exception ex) // Måste vara sist!
+        {
+            Console.WriteLine(ex.Message);
+        }
+        ```
+        ---
+
+        # Filhantering
+
+        - ...
 </textarea>
 <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
 </script>

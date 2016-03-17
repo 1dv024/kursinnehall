@@ -203,6 +203,10 @@ code.csharp.hljs {
         color: #d69d85;
     }
 
+    code.csharp .hljs-title {
+        color: #dcdcdc;
+    }
+
     code.csharp .hljs-comment {
         color: #608b4e;
     }
