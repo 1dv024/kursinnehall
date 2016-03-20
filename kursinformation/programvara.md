@@ -1,6 +1,6 @@
 
 ## Visual Studio Enterprise 2015
-Under kursen kommer programmet Microsoft Visual Studio 2015 att användas till att skapa konsol- och webbapplikationer.
+Under kursen kommer programmet Microsoft Visual Studio Enterprise 2015 att användas till att skapa konsol- och webbapplikationer.
 
 Som progamstudent vid en utbildning vid FTK (Fakulteten för teknik) kan du <a href="http://juno.lnu.se/msdnaa">ansöka om tillgång till Visual Studio genom Microsoft Dreamspark for Academic Institutions</a>. Då din ansökan behandlats och godkänts kan du hämta hem utvecklingsverktyg, operativsystem, etc.
 
