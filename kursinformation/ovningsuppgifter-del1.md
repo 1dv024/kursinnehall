@@ -38,7 +38,11 @@
 > Användning av samlingsklassen ```SortedList```.<br />
 > Hur du använder gränssnittet (interfacet) ```IDictionary```.
 
+**[Växelpengar (A-, B- och C-nivå)](https://github.com/1dv024/exercise-count-back-change)**
+
+> En introducerande "tre-stegsuppgift" om att strukturera ett enklare program enligt goda objektorienterade principer. Du kan skriva programmet på varierande kravnivåer, där C-nivån är mest avancerad.
+
 **[Rita med asterisker (A-, B- och C-nivå)](https://github.com/1dv024/exercise-stars-stripes-and-diamonds)**
 
-> En "tre-stegsuppgift" där du kan skriva ett program på varierande kravnivåer. Försök nå den avancerade C-nivån, som bjuder mest utmaning!
+> Ännu en "tre-stegsuppgift" där du löser ett problem med olika krav på hur programmet lever upp till objektorienterad programkvalitet. Försök nå den mer avancerade C-nivån, som bjuder mest utmaning!
 
