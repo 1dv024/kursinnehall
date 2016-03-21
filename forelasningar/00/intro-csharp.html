@@ -103,6 +103,7 @@
             1. Kompilatorn översätter källkoden till CIL-kod och skapar en assembly, Program.exe.
             2. Vid exekvering av en assembly kompileras koden av en JIT-kompilator som genererar "native"-kod för CPUn.
             3. CPUn exekverar "native"-koden.
+        - ILDASM.
 
         ---
     
@@ -119,11 +120,11 @@
 
         ---
 
-        # Typdefinition
+        # Typdeklaration
 
-        - All exekveringsbar kod måste vara inuti en typdefinition, där den vanligaste är en klassdefinition.
-            - En typdefinition per källkodsfil, som namnges som typen (ex. ```Program.cs```).
-            - ```class``` innebär att typdefinitionen är en klassdefinition.
+        - All exekveringsbar kod måste vara inuti en typdeklaration, där den vanligaste är en klassdeklaration.
+            - En typdeklaration per källkodsfil, som namnges som typen (ex. ```Program.cs```).
+            - ```class``` innebär att typdeklarationen är en klassdeklaration.
             - ```Program``` är typens namn.
             - ```{}``` mellan klammerparenteserna skrivs klassens medlemmar, t.ex. metoder.
 
@@ -134,7 +135,7 @@
         }
         ```
 
-        - En klassdefinition innehåller typiskt <a href="https://msdn.microsoft.com/en-us/library/ms173114.aspx">metoder</a>.
+        - En klassdeklaration innehåller typiskt <a href="https://msdn.microsoft.com/en-us/library/ms173114.aspx">metoder</a>.
             - ```static``` innebär att metoden är <a href="https://msdn.microsoft.com/en-us/library/98f28cdx.aspx">statisk</a> och måste anropas via klassens namn, och inte via en referens till ett objekt.
             - ```void``` innebär att metoden inte returnerar något värde.
             - ```Main``` är metodens namn (speciell innebörd då det är applikationens startpunkt).

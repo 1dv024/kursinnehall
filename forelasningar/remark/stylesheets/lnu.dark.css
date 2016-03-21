@@ -181,14 +181,20 @@
         display: none;
     }
 
-.lnu .sh .hljs-comment {
-    color: #f8f8f8;
+code.sh.hljs {
+    background-color: #0e1e1e;
+    color: #dcdcdc;
+    width: 90%;
 }
+
+    code.sh.hljs .hljs-comment {
+        color: #dcdcdc;
+    }
 
 code.csharp.hljs {
     background-color: #0e1e1e;
     color: #dcdcdc;
-    width: 80%;
+    width: 90%;
 }
 
     code.csharp .hljs-keyword {
