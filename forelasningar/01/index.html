@@ -12,7 +12,7 @@
         class: center, middle, lnu-background-yellow
 
         ### Objektorienterad programmering (1DV024)
-        # Introduktion till C# #
+        # Operatorer, styrstrukturer, undantag, filer
 
         <div class="lnu-footer">
             <img src="../remark/images/lnu-logotype.png">
@@ -205,9 +205,9 @@
 
         # Olika hantering beroende av fel
 
-        - Det är möjligt att ha flera ```catch```-block i en och samma ```try-catch```-sats.
+        - Det är möjligt att ha flera <code class="remark-inline-code">catch</code>-block i en och samma <code class="remark-inline-code">try-catch</code>-sats.
         - Ordningen är viktig!
-        - (Klassen ```Exception``` är basklass för alla övriga typer av undantag.)
+        - (Klassen <code class="remark-inline-code">Exception</code> är basklass för alla övriga typer av undantag.)
 
         ```
         byte number;
@@ -232,11 +232,118 @@
             Console.WriteLine(ex.Message);
         }
         ```
+
         ---
 
         # Filhantering
 
-        - ...
+        - Klassen <code class="remark-inline-code">StreamWriter</code> använder du för att skriva text till en fil.
+
+        ```
+        using (var writer = new StreamWriter(@"..\..\MyTextFile.txt"))
+        {
+            writer.WriteLine("Mats är");
+            writer.WriteLine("snäll.");
+        }
+        ```
+
+        - Klassen <code class="remark-inline-code">StreamReader</code> använder du för att läsa en fil med text.
+
+        ```
+        using (var reader = new StreamReader(@"..\..\MyTextFile.txt"))
+        {
+            string line;
+            while ((line = reader.ReadLine()) != null)
+            {
+                WriteLine(line);
+            }
+        }
+        ```
+
+        - <code class="remark-inline-code">using</code> expanderas till en <code class="remark-inline-code">try-finally</code>-sats, där <code class="remark-inline-code">finally</code>-blocket säkerställer att filen stängs.
+
+        ```ildasm
+        .method private hidebysig static void  Main(string[] args) cil managed
+        { // >>> Code left out for brevity! <<<
+          .try
+          {
+          }  // end .try
+          finally
+          {
+            IL_002e:  callvirt   instance void [mscorlib]System.IDisposable::Dispose()
+          }  // end handler
+        } // end of method Program::Main
+        ```
+
+        ---
+
+        # Läsa JSON från fil
+
+        movies.json
+        ```
+        [
+          "The Shawshank Redemption",
+          "The Godfather",
+          "The Godfather: Part II",
+          "The Dark Knight",
+          "Pulp Fiction"
+        ]
+        ```
+
+        - Läser fil till sträng och deserialiserar till en array med strängar.
+
+        ```
+        string json;
+
+        using (var reader = new StreamReader("movies.json"))
+        {
+            json = reader.ReadToEnd();
+        }
+
+        var movies = JsonConvert.DeserializeObject<string[]>(json);
+
+        Console.WriteLine(string.Join(", ", movies));
+        ```
+
+        - Läser fil till sträng och deserialiserar till ett List-objekt med strängar.
+
+        ```
+        var json = File.ReadAllText("movies.json");
+        var movies = JsonConvert.DeserializeObject<List<string>>(json);
+        Console.WriteLine(string.Join(", ", movies));
+        ```
+
+        ???
+        install-package newtonsoft.json
+
+        ---
+
+        # Deserialisera JSON direkt från fil
+
+        movies.json
+        ```
+        [
+        "The Shawshank Redemption",
+        "The Godfather",
+        "The Godfather: Part II",
+        "The Dark Knight",
+        "Pulp Fiction"
+        ]
+        ```
+
+        - Läser fil och deserialiserar till en array med strängar.
+
+        ```
+        string[] movies;
+
+        using (var reader = File.OpenText("movies.json"))
+        {
+            var serilazier = new JsonSerializer();
+            movies = (string[])serilazier.Deserialize(reader, typeof(string[]));
+        }
+
+        Console.WriteLine(string.Join(", ", movies));
+        ```
 </textarea>
 <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
 </script>

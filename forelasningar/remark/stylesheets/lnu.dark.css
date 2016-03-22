@@ -191,6 +191,19 @@ code.sh.hljs {
         color: #dcdcdc;
     }
 
+code.ildasm.hljs {
+    background-color: rgb(255, 255, 225);
+    color: #000;
+    width: 90%;
+}
+
+    code.ildasm.hljs .hljs-built_in,
+    code.ildasm.hljs .hljs-keyword,
+    code.ildasm.hljs .hljs-type{
+        color: #000;
+        font-weight: normal;
+    }
+
 code.csharp.hljs {
     background-color: #0e1e1e;
     color: #dcdcdc;
