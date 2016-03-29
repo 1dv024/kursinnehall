@@ -1,0 +1,399 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>01 - Objektorienterad programmering (1DV024)</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="../remark/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../remark/stylesheets/lnu.dark.css" id="theme">
+</head>
+<body class="lnu">
+<textarea id="source">
+
+    class: center, middle, lnu-background-yellow
+
+    ### Objektorienterad programmering (1DV024)
+    # Metoder och parametrar
+
+    <div class="lnu-footer">
+        <img src="../remark/images/lnu-logotype.png">
+        <img src="../remark/images/lnu-symbol.png">
+    </div>
+
+    ---
+
+    class: lnu-background-cc
+
+    ### Upphovsrätt för detta verk
+
+    Detta verk är framtaget av Mats Loock i anslutning till kursen Objektorienterad programmering (1DV024) vid Linnéuniversitetet.
+
+    Allt innehåll i detta verk förutom fotografier, ikoner, bild på kurslitteraturen samt Linnéuniversitetets logotyp och symbol,
+    är licensierad under en <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+    <img alt="Creative Commons-licens" style="border-width:0;vertical-align:middle" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+    Creative Commons Erkännande 4.0 Internationell Licens
+    </a>.
+    #### Du får använda detta verk så här
+    - kopiera hela eller delar av innehållet
+    - sprida hela eller delar av innehållet
+    - visa hela eller delar av innehållet offentligt och digitalt
+    - konvertera innehållet till annat format
+    - du får även göra om innehållet
+
+    Om du förändrar innehållet så ta inte med fotografier, ikoner samt Linnéuniversitetets logotyp och symbol i din nya version!
+
+    Vid all användning måste du ange källan: ”Linnéuniversitetet – Objektorienterad programmering (1DV024)” och
+    en länk till https://coursepress.lnu.se/kurs/objektorienterad-programmering och till Creative Common-licensen här ovan.
+
+    ---
+
+    # Vad är en metod?
+
+    - Ett sätt att samla en sekvens med satser som utför något specifikt.
+    - Tillhör alltid en typ, oftast en klass.
+    - Kan ha vilket antal parametrar som helst, där parametrar används för att ta emot data, argument, från den anropande metoden.
+        - Måste anropas med lika många argument som det finns parametrar om ingen parameter är valfri (_"optional"_).
+        - Ordningen mellan parametrar kan ändras vid anrop genom att använda namngivna parametrar.
+    - Kan returnera tillbaka en typ av värde till den metod som anropade metoden.
+        - Returtypen void innebär att inget värde kan returneras.
+        - Returtypen dynamic innebär att vilken typ som helst kan returneras.
+
+    ```
+    class Program
+    {
+        static void Main()
+        {
+            string firstName = GetUserInput("Ange ditt förnamn: ");
+            string lastName = GetUserInput("Ange ditt efternamn: ");
+
+            // code left out for brevity...
+        }
+
+        static string GetUserInput(string prompt)
+        {
+            Console.Write(prompt);
+            return Console.ReadLine();
+        }
+    }
+    ```
+
+    ---
+
+    # Returvärden
+
+    - En metod som inte ska returnerar något värde måste ha returtypen <code class="remark-inline-code">void</code>.
+        - En <code class="remark-inline-code">void</code>-metod kan dock innehålla <code class="remark-inline-code">retur</code>-sats(er).
+
+    ```
+    static void WriteWeekdayName()
+    {
+        if (DateTime.Today.DayOfWeek == DayOfWeek.Saturday ||
+            DateTime.Today.DayOfWeek == DayOfWeek.Sunday)
+        {
+            return;
+        }
+
+        Console.WriteLine($"Dagens namn är {DateTime.Today.ToString("dddd")}."); // Dagens namn är tisdag.
+    }
+    ```
+
+    - En metod som returnerar ett värde måste ha en en returtyp som överensstämmer med värdets typ.
+
+    ```
+    static int GetRandomNumber()
+    {
+        var random = new Random();
+
+        return random.Next(1, 10); // [1, 9]
+    }
+    ```
+
+    ```
+    static int GetNumber()
+    {
+        return 3.14; // Error CS0266 Cannot implicitly convert type 'double' to 'int'. An explicit conversion exists (are you missing a cast?)
+    }
+    ```
+
+    ???
+
+    - https://github.com/1dv024/example-introducing-methods/tree/master/losning
+    - Strukturera om koden.
+        - Till C# 6.
+        - Till annan klass än Program. GetInitials, GetFullName => UserInfo.
+
+
+    Program.cs
+
+    ```
+    using System;
+
+    namespace IntroducingMethods
+    {
+        /// <summary>
+        /// Exempel från Essential C# 6.0, kapitel 4, sidan 169-170.
+        /// </summary>
+        class Program
+        {
+            static void Main()
+            {
+                // Lokala variabler för förnamn, efternamn, fullständigt namn och initialer.
+                string firstName;
+                string lastName;
+                string fullName;
+                string initials;
+
+                // Hämta indata från användaren.
+                Console.WriteLine("Hallå där!");
+                firstName = GetUserInput("Skriv in ditt förnamn: ");
+                lastName = GetUserInput("Skriv in ditt efternamn: ");
+
+                // Bestäm fullständigt namn samt initialer och presentera detta.
+                fullName = GetFullName(firstName, lastName);
+                initials = GetInitials(firstName, lastName);
+                DisplayGreeting(fullName, initials);
+            }
+
+            static string GetUserInput(string prompt)
+            {
+                // Lokal variabel för hantering av indata.
+                string input;
+
+                // Skriv ut ledtext och läs in datat som användaren matar in.
+                Console.Write(prompt);
+                input = Console.ReadLine();
+
+                // Returnera inläst data
+                return input;
+            }
+
+            // metodkroppen i ursprunglig kodversion är mycket komprimerad:
+            // static string GetFullName(string fName, string lName) => $"{fName} {lName}";
+
+            // Oftare ses metoder definierade på detta sätt:
+            static string GetFullName(string fName, string lName)
+            {
+                // Att först definiera en lokal variabel för det fullständiga namnet ...
+                string result;
+
+                // ... gör det möjligt att synliggöra flera steg i metodens arbete.
+                // Formatera först för- och efternamn till ett fullständigt namn ...
+                result = String.Format("{0} {1}", fName, lName);
+
+                // ... avsluta därefter metoden genom att returnera resultatet.
+                return result;
+            }
+
+            private static string GetInitials(string firstName, string lastName)
+            {
+
+                return $"{firstName[0]}.{lastName[0]}.";
+            }
+
+            static void DisplayGreeting(string fullName, string initials)
+            {
+                // Skriv ut det fullständiga namnet samt initialerna och lämna metoden.
+                Console.WriteLine($"Hej {fullName}! Dina initialer är {initials}");
+
+                return; // Denna sats behövs egentligen inte då metodens returtyp är void,
+                        // men är alltså fullt möjligt att använda även här.
+            }
+        }
+    }
+    ```
+
+    ---
+
+    # Parametrar
+
+    - Samtliga parametrar måste anges, vara i rätt ordning och vara av rätt typ.
+        - Använder du namngivna parametrar behöver du inte bry dig om ordningen.
+
+    ```
+    static void Main()
+    {
+        string fullName;
+
+        fullName = GetFullName("Ellen", "Nu"); // Ellen Nu
+        fullName = GetFullName(lastName: "Nu", firstName: "Ellen" ); // Ellen Nu
+    }
+
+    static string GetFullName(string firstName, string lastName) => $"{firstName} {lastName}";
+    ```
+
+    - Parametrar som är "_optional_" kan utelämnas och får då sitt standardvärde.
+
+    ```
+    static void Main()
+    {
+        string fullName;
+
+        fullName = GetFullName(); // N N
+        fullName = GetFullName("Ellen"); // Ellen N
+        fullName = GetFullName("Ellen", "Nu"); // Ellen Nu
+        fullName = GetFullName(lastName: "Nu"); // N Nu
+        fullName = GetFullName(lastName: "Nu", firstName: "Ellen"); // Ellen Nu
+    }
+
+    static string GetFullName(string firstName = "N", string lastName = "N") => $"{firstName} {lastName}";
+    ```
+
+    ---
+
+    # Parameterarrayer
+
+    - Genom att låta en parameter vara en parameterarray kan du välja hur många argument som ska användas vid anrop av metoden.
+        - Parameterarrayen måste vara den sista parametern i parameterlistan.
+        - Argumentet kan vara en array eller en kommaseparerad lista med argument.
+
+    ```
+        static void Main()
+        {
+            int sum;
+
+            int[] scores = { 78, 76, 81, 77, 72, 75 };
+            sum = Sum(scores); // 459
+
+            sum = Sum(1, 2, 3, 4, 5); // 15
+        }
+
+        static int Sum(params int[] numbers)
+        {
+            int sum = 0;
+
+            foreach (int number in numbers)
+            {
+                sum += number;
+            }
+
+            return sum;
+        }
+    ```
+
+    ---
+
+    # Överlagring (_"overloading"_)
+
+
+    - Metoder kan ha samma namn så länge som de i övrigt har olika signaturer.
+        - En signatur är metodens namn, antal parametrar och parameterdatatyper.
+
+    ```
+    static void Main(string[] args)
+    {
+        int sum = MyMath.Add(123, 456);
+        double anotherSum = MyMath.Add(9.87, 6.54);
+        var yetAnotherSum = MyMath.Add(123, 6.54));
+    }
+
+    public static int Add(int op1, int op2)
+    {
+        return op1 + op2;
+    }
+
+    public static double Add(double op1, double op2)
+    {
+        return op1 + op2;
+    }
+
+    ```
+    ---
+
+    # out-parameter
+
+    - Genom att använda <code class="remark-inline-code">out</code> för en parameter av värdetyp kan den "göras om" till referenstyp.
+
+    ```
+    static void Main(string[] args)
+    {
+        int odd;
+
+        if (TryParseOddInt(out odd))
+        {
+            Console.WriteLine($"{odd} is an odd number.");
+        }
+    }
+
+    static bool TryParseOddInt(out int number)
+    {
+        if (int.TryParse(Console.ReadLine(), out number) && number % 2 == 1)
+        {
+            return true;
+        }
+
+        number = default(int); // 0
+
+        return false;
+    }
+    ```
+
+    ---
+
+    # ref-parametrar
+
+    - Genom att använda <code class="remark-inline-code">ref</code> för en parameter av värdetyp kan den "göras om" till referenstyp.
+    - Variabel måste ha ett värde innan anrop av metod med <code class="remark-inline-code">ref</code>-parameter.
+
+    ```
+    static void Main(string[] args)
+    {
+        int first = 3;
+        int second = 42;
+
+        Console.WriteLine($"first: {first}\tsecond: {second}"); // first: 3        second: 42
+
+        Swap(ref first, ref second);
+
+        Console.WriteLine($"first: {first}\tsecond: {second}"); // first: 42       second: 3
+    }
+
+    static void Swap(ref int x, ref int y)
+    {
+        int temp = x;
+        x = y;
+        y = temp;
+    }
+    ```
+    ---
+
+    # Returtypen dynamic är "BAD PRACTICE"!
+
+    - ...men kan vara användbar.
+
+    Tveksam användning
+
+    ```
+    static void Main()
+    {
+        var bar = Foo(0); // 0, int
+        var qux = Foo(1); // Inte noll!, string
+    }
+
+    static dynamic Foo(int i)
+    {
+        if (i == 0)
+        {
+            return 0;
+        }
+
+        return "Inte noll!";
+    }
+    ```
+
+</textarea>
+<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+</script>
+<script>
+    var slideshow = remark.create({
+        ratio: "16:9",
+        highlightLanguage: "csharp",
+//        highlightStyle: "Vs",
+        highlightLines: true,
+        navigation: {
+            scroll: true,
+            touch: false,
+            click: false
+        }
+    });
+</script>
+</body>
+</html>
