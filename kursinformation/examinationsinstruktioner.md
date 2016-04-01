@@ -19,7 +19,7 @@ Sammanfattningsvis ska du göra följande:
 2. Byt katalog till den nerklonade uppgiften
   * Exempelvis: `cd xx222yy-examination-1`
 3. Fyll på repot med examinationsuppgift NR
-  * `git pull https://github.com/1dv021/examination-1` (examination-2, examination-3 för examintion 2 respektive 3.)
+  * `git pull https://github.com/1dv024/examination-1` (examination-2, examination-3 för examintion 2 respektive 3.)
 
 ***
 
