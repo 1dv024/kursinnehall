@@ -10,7 +10,7 @@
 
 ...
 
-_(Fler uppgifter kommer att läggas ut inför start av steg 2 ...)_
+_(Fler uppgifter kommer att läggas ut under steg 2 ...)_
 
 ...
 
@@ -20,7 +20,7 @@ _(Fler uppgifter kommer att läggas ut inför start av steg 2 ...)_
 
 ...
 
-**[Gissa det hemliga talet (A-, B- och C-nivå)](https://github.com/1dv024/exercise-xxx)**
+**[Gissa det hemliga talet (A-, B- och C-nivå)](https://github.com/1dv024/exercise-number-guessing-game)**
 
 > En varierad fler-stegsuppgift som innebär att du skriver färdigt en påbörjad applikation. Grundprojektet ska kompletteras med en klass som definieras enligt ett givet klassdiagram, antingen i konsoll-miljö eller som en MVC-applikation i ett enklare webbgränssnitt. Att klassen uppfyller alla krav kommer testas av ett medföljande testprogram.
 
