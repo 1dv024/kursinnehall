@@ -4,6 +4,11 @@
 > Grundläggande klassmedlemmar som fält (_fields_), egenskaper (_properties_) och metoder.<br />
 > Vad överlagring (”_overloading_”) innebär i samband med konstruktorer.
 
+**[Bankkonton](https://github.com/1dv024/exercise-bank-accounts)** behandlar:
+
+> Att från ett klassdiagram skapa en klass med flera fält, egenskaper, och metoder, samt en symbolisk konstant som klassmedlem.<br />
+> Egenskapers get- och set-metoder som en mix av _public_ och _private_-åtkomst.
+
 **...**
 
 ...
