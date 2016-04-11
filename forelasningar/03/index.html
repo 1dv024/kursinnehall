@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>03 - Objektorienterad programmering (1DV024)</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="../remark/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../remark/stylesheets/lnu.dark.css" id="theme">
+</head>
+<body class="lnu">
+<textarea id="source">
+
+    class: center, middle, lnu-background-yellow
+
+    ### Objektorienterad programmering (1DV024)
+    # Klasser och objekt
+
+    <div class="lnu-footer">
+        <img src="../remark/images/lnu-logotype.png">
+        <img src="../remark/images/lnu-symbol.png">
+    </div>
+
+    ---
+    class: lnu-background-cc
+
+    ### Upphovsrätt för detta verk
+
+    Detta verk är framtaget av Mats Loock i anslutning till kursen Objektorienterad programmering (1DV024) vid Linnéuniversitetet.
+
+    Allt innehåll i detta verk förutom fotografier, ikoner, bild på kurslitteraturen samt Linnéuniversitetets logotyp och symbol,
+    är licensierad under en <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+    <img alt="Creative Commons-licens" style="border-width:0;vertical-align:middle" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+    Creative Commons Erkännande 4.0 Internationell Licens
+    </a>.
+    #### Du får använda detta verk så här
+    - kopiera hela eller delar av innehållet
+    - sprida hela eller delar av innehållet
+    - visa hela eller delar av innehållet offentligt och digitalt
+    - konvertera innehållet till annat format
+    - du får även göra om innehållet
+
+    Om du förändrar innehållet så ta inte med fotografier, ikoner samt Linnéuniversitetets logotyp och symbol i din nya version!
+
+    Vid all användning måste du ange källan: ”Linnéuniversitetet – Objektorienterad programmering (1DV024)” och
+    en länk till https://coursepress.lnu.se/kurs/objektorienterad-programmering och till Creative Common-licensen här ovan.
+
+    ---
+
+    # Vilka typer av objekt har vi? (1 av 2)
+
+    <img class="organe-border" src="https://docs.google.com/drawings/d/1K52fhLyyC5vjfSrAz5F034jKBsqitqhwUpKwKqDjq2A/pub?w=960&h=540" />
+
+
+    ---
+
+    # Vilka typer av objekt har vi? (2 av 2)
+
+    <img class="organe-border" src="https://docs.google.com/drawings/d/1FwsUjVMeoaCehrNtB7jpKx0H4pVyXzaNpy-ZvG6Ks_c/pub?w=960&h=540" />
+
+    ---
+
+    # Klassificering av objekt
+
+    <img class="organe-border" src="https://docs.google.com/drawings/d/1Od9obFMKHIKo16u1HOtY3pvxICGdCVfmUNRz1Gmx-ZQ/pub?w=960&h=540" />
+
+    ---
+
+    # Klassificering av figurer
+
+    <img class="organe-border" src="https://docs.google.com/drawings/d/1yRMQoDB5sUdkOEqEnkQ3_Pswj3SJ55kc6f6bFrGKkJE/pub?w=960&h=540" />
+
+    ---
+
+    # Vad utmärker en rektangel?
+
+    <img class="organe-border" src="https://docs.google.com/drawings/d/1jKXchON-xUR7Bzz4Cu426rWQjeucU0CVTtDda9cCiWE/pub?w=960&h=540" />
+
+    ---
+
+    # Vad en rektangel "har" och "kan"
+
+    - En rektangel __har__ (_attribut_, kännetecken):
+        - bredd
+        - höjd
+        - färg
+    - En rektangel __kan__ (_operationer_, sätt att ändra på kännetecken):
+        - ändra bredd
+        - ändra höjd
+        - ändra färg
+
+    ---
+
+    # Rektangel som klass
+
+    - Ett klassdiagram beskriver klassens namn, attribut och operationer.
+
+    <table class="lnu-class-diagram" >
+        <thead>
+            <tr>
+                <th>
+                    Rektangel
+                </th>
+                <th>
+                    namn
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    bredd<br />
+                    höjd<br />
+                    färg<br />
+                </td>
+                <td>
+                    attribut
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ändraBredd()<br />
+                    ändraHöjd()<br />
+                    ändraFärg()<br />
+                </td>
+                <td>
+                    operationer
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    ---
+
+    # Klassdeklaration i C# #
+
+    <img style="position: absolute; right: 10%;top: 10%;" src="https://docs.google.com/drawings/d/1qTzlRXOfpytPFO_tN15hagkkguojddgQN7iDd4wv9UM/pub?w=295&h=270" />
+
+    .smaller[
+    ```
+    public class Rectangle
+    {
+        private int _height;
+        private int _width;
+
+        public Rectangle(int width, int height, Color color)
+        {
+            Width = width;
+            Height = height;
+            Color = color;
+        }
+
+        public Color Color { get; set; }
+
+        public int Width
+        {
+            get { return _width; }
+            set
+            {
+                if (value <= 0)
+                {
+                    throw new ArgumentOutOfRangeException(nameof(value));
+                }
+                _width = value;
+            }
+        }
+
+        public int Height
+        {
+            get { return _height; }
+            set
+            {
+                if (value <= 0)
+                {
+                    throw new ArgumentOutOfRangeException(nameof(value));
+                }
+                _height = value;
+            }
+        }
+
+        public override string ToString()
+            => $"Width: {Width}, Height: {Height}, Color: {Color.ToArgb()}";
+    }
+    ```
+    ]
+
+    ---
+
+    # Du använder en klass för att skapa objekt
+
+    <img class="organe-border" src="https://docs.google.com/drawings/d/15_urAd-zPOu-dKtS-b-6CpoKM2oa74tFr1Jf6ZBOIHg/pub?w=960&h=540" />
+
+    ---
+
+    # <span style="font-size: smaller;">När du skapar ett nytt objekt av en klass...</span>
+
+    - ...kallas det att du skapar en __instans__ av den klassen.
+
+    <img class="organe-border" src="https://docs.google.com/drawings/d/1dwBQmLB59al8sar3kcyAUUGX-2p3sOp2RykAqpmfyCs/pub?w=833&h=500" />
+
+
+</textarea>
+<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+</script>
+<script>
+    var slideshow = remark.create({
+        ratio: "16:9",
+        highlightLanguage: "csharp",
+//        highlightStyle: "Vs",
+        highlightLines: true,
+        navigation: {
+            scroll: true,
+            touch: true,
+            click: false
+        }
+    });
+</script>
+</body>
+</html>

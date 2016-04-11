@@ -181,6 +181,29 @@
         display: none;
     }
 
+.lnu-class-diagram {
+    border-collapse: collapse;
+    font-size: 1.5em;
+}
+
+    .lnu-class-diagram th,
+    .lnu-class-diagram td{
+        padding: .5em;
+        border-spacing: 0;
+    }
+
+        .lnu-class-diagram th:nth-child(1),
+        .lnu-class-diagram td:nth-child(1){
+            background-color: #FFF;
+            color: #000;
+            border: solid #8c8c8c 2px;
+        }
+
+        .lnu-class-diagram th:nth-child(2){
+            text-align: left;
+            font-weight: normal;
+        }
+
 code.sh.hljs {
     background-color: #0e1e1e;
     color: #dcdcdc;
@@ -229,3 +252,19 @@ code.csharp.hljs {
     code.csharp .hljs-comment {
         color: #608b4e;
     }
+
+.organe-border {
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    border-radius: 80px;
+    border: 3px solid #eba056;
+}
+
+.smaller {
+    font-size: 85%;
+}
+.multi {
+    column-count: 3;
+    column-gap: 10px;
+    column-rule: 1px solid black;
+}

@@ -251,9 +251,14 @@
     <script>
         var slideshow = remark.create({
             ratio: "16:9",
-            highlightLanguage: "C#",
-            highlightStyle: "ir-black",
-            highlightLines: true
+            highlightLanguage: "csharp",
+//            highlightStyle: "ir-black",
+            highlightLines: true,
+            navigation: {
+                scroll: true,
+                touch: true,
+                click: false
+            }
         });
     </script>
 </body>
