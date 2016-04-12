@@ -11,7 +11,7 @@ Korta exempel på enklare programlösningar eller kod som demonstrerats under f�
 
 ...
 
-_(Fler uppgifter kommer att läggas ut under steg 2 ...)_
+_(Fler uppgifter läggs ut under steg 2 ...)_
 
 ...
 
