@@ -4,10 +4,10 @@ Korta exempel på enklare programlösningar eller kod som demonstrerats under f�
 
 Yippee-ki-yay ... alla tärningsspelare! En "oblodig" introduktion till klasser med en _random_ snubbe och två Die-objekt ... :) 
 
-** [Elementary Inheritance](https://github.com/1dv024/example-elementary-inheritance)
+**[Elementary Inheritance](https://github.com/1dv024/example-elementary-inheritance)
 
 Arv.
 
-** [Great Inheritance](https://github.com/1dv024/example-great-inheritance)
+**[Great Inheritance](https://github.com/1dv024/example-great-inheritance)
 
 Mer om arv.
