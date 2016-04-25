@@ -12,10 +12,6 @@ Arv.
 
 Mer om arv.
 
-**[First Zoo](https://github.com/1dv024/example-first-zoo)**
-
-Arv.
-
-**[Second Zoo](https://github.com/1dv024/example-second-zoo)**
+**[The Zoo](https://github.com/1dv024/example-second-zoo)**
 
 Arv, abstrakt basklass, interface.
