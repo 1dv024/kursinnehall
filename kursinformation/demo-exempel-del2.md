@@ -11,3 +11,11 @@ Arv.
 **[Great Inheritance](https://github.com/1dv024/example-great-inheritance)**
 
 Mer om arv.
+
+**[First Zoo](https://github.com/1dv024/example-first-zoo)**
+
+Arv.
+
+**[Second Zoo](https://github.com/1dv024/example-second-zoo)**
+
+Arv, abstrakt basklass, interface.
