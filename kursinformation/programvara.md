@@ -1,6 +1,6 @@
 ## Visual Studio Code
 
-Oavsett vilket operatvsystem du har __bör__ <a href="https://code.visualstudio.com/">Visual Studio Code</a> fungera för samtliga programmeringsuppgifter i kursen. Kör du Windows rekommenderas Visual Studio Enterprise 2015 starkt för en rikare upplevelse.
+Oavsett vilket operativsystem du har __bör__ <a href="https://code.visualstudio.com/">Visual Studio Code</a> fungera för samtliga programmeringsuppgifter i kursen. Kör du Windows rekommenderas Visual Studio Enterprise 2015 starkt för en rikare upplevelse.
 
 ## Visual Studio Enterprise 2015
 
