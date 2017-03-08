@@ -1,6 +1,8 @@
 ## Visual Studio Code
 
-Oavsett vilket operativsystem du har __bör__ <a href="https://code.visualstudio.com/">Visual Studio Code</a> fungera för samtliga programmeringsuppgifter i kursen. Kör du Windows rekommenderas Visual Studio Enterprise 2015 starkt för en rikare upplevelse.
+Oavsett vilket operativsystem du har __bör__ <a href="https://code.visualstudio.com/">Visual Studio Code</a> fungera för samtliga programmeringsuppgifter i kursen. Ta en titt på den korta videon (4:39) för hur du kommer igång med Visual Studio Code och C# med .NET Core.
+
+OBS! Kör du Windows rekommenderas Visual Studio Enterprise 2015 starkt för en rikare upplevelse.
 
 ## Visual Studio Enterprise 2015
 
