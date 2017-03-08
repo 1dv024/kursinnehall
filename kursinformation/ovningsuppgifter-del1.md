@@ -27,13 +27,13 @@
 > Hur du öppnar och läser en textfil rad för rad.<br />
 > Hur du använder ```using``` för att automatiskt stänga en fil.
 
+<!--
 **[Hur många gånger förekommer orden?](https://github.com/1dv024/exercise-frequency-of-words)** behandlar:
 
 > Filhantering.<br />
 > Användning av samlingsklassen ```SortedList```.<br />
 > Hur du använder gränssnittet (interfacet) ```IDictionary```.
 
-<!--
 **[Växelpengar (A-, B- och C-nivå)](https://github.com/1dv024/exercise-count-back-change)**
 
 > En introducerande "tre-stegsuppgift" om att strukturera ett enklare program enligt goda objektorienterade principer. Du kan skriva programmet på varierande kravnivåer, där C-nivån är mest avancerad.
