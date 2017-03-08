@@ -1,3 +1,4 @@
+<!--
 **[Repeterbara citat](https://github.com/1dv024/exercise-quotation-viewer)** behandlar:
 
 > Hur du skriver en enkel klass med utgångspunkt från ett klassdiagram.<br /> 
@@ -33,3 +34,4 @@ _(Fler uppgifter kommer att läggas ut under steg 2 ...)_
 
 > En något mer komplex flernivå-uppgift om att skriva program med flera samverkande klasser enligt goda objektorienterade designprinciper. Till varje kravnivå skriver du även ett eget, enklare testprogram som verifierar att "väckarklockans" alla delar fungerar.
 
+-->
