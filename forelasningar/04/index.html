@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>03 - Objektorienterad programmering (1DV024)</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="../remark/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../remark/stylesheets/lnu.dark.css" id="theme">
+</head>
+<body class="lnu">
+<textarea id="source">
+
+    class: center, middle, lnu-background-yellow
+
+    ### Objektorienterad programmering (1DV024)
+    # Klasser och arv
+
+    <div class="lnu-footer">
+        <img src="../remark/images/lnu-logotype.png">
+        <img src="../remark/images/lnu-symbol.png">
+    </div>
+
+    ---
+    class: lnu-background-cc
+
+    ### Upphovsrätt för detta verk
+
+    Detta verk är framtaget av Mats Loock i anslutning till kursen Objektorienterad programmering (1DV024) vid Linnéuniversitetet.
+
+    Allt innehåll i detta verk förutom fotografier, ikoner, bild på kurslitteraturen samt Linnéuniversitetets logotyp och symbol,
+    är licensierad under en <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+    <img alt="Creative Commons-licens" style="border-width:0;vertical-align:middle" src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+    Creative Commons Erkännande 4.0 Internationell Licens
+    </a>.
+    #### Du får använda detta verk så här
+    - kopiera hela eller delar av innehållet
+    - sprida hela eller delar av innehållet
+    - visa hela eller delar av innehållet offentligt och digitalt
+    - konvertera innehållet till annat format
+    - du får även göra om innehållet
+
+    Om du förändrar innehållet så ta inte med fotografier, ikoner samt Linnéuniversitetets logotyp och symbol i din nya version!
+
+    Vid all användning måste du ange källan: ”Linnéuniversitetet – Objektorienterad programmering (1DV024)” och
+    en länk till https://coursepress.lnu.se/kurs/objektorienterad-programmering och till Creative Common-licensen här ovan.
+
+    ---
+
+    # Generalisering/specialisering
+
+    - Klasser kan organiseras i hierarkier.
+    - Arv innebär en specialisering av en basklass.
+    - En härledd klass ärver samtliga medlemmar, utom konstruktorer, från en basklass.
+    - Basklass
+        - superklass, förälder
+    - Härledd klass
+        - subklass, barn
+
+    ---
+
+    # Arv
+
+    - En klassdeklaration
+
+    ```
+    public class Bar : Foo
+    {
+        // ...
+    }
+    ```
+
+    - <code>Bar</code> är en härledd klass från <code>Foo</code>.
+    - <code>Foo</code> är basklass till <code>Bar</code>.
+    - <code>Bar</code> ärver alla medlemmar, utom konstruktorer, av <code>Foo</code>.
+
+    ---
+
+    # Det går inte att skapa en klass som INTE är härledd!
+
+    - Varje klass ärver från ```Object```.
+    - ```Object``` deklarerar bland annat tre virtuella metoder som ofta överskuggas:
+        - ```ToString()```
+        - ```Equals()```
+        - ```GetHashCode()```
+
+    ```
+    public class Foo
+    {
+        // ...
+    }
+    ```
+
+    - Klassen ```Foo``` ärver från klassen ```Object``` även om något arv inte är angivet.
+
+    ---
+
+    # Enkelt arv
+
+    <img src="https://docs.google.com/drawings/d/1x4YDOJ1mD-W8fvC4NhiQT4P7P9-a9TckYmGXD74dVAY/pub?w=482&h=218" />
+
+    - En klass har vid enkelt arv endast en basklass.
+        - Foo är en omedelbar basklass till Bar.
+    - En basklass kan ha ett godtyckligt antal klasser som ärver.
+        - Bar, Baz och Qux är klasser som ärver från basklassen Foo.
+
+
+</textarea>
+<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+</script>
+<script>
+    var slideshow = remark.create({
+        ratio: "16:9",
+        highlightLanguage: "csharp",
+//        highlightStyle: "Vs",
+        highlightLines: true,
+        navigation: {
+            scroll: true,
+            touch: true,
+            click: false
+        }
+    });
+</script>
+</body>
+</html>
