@@ -168,7 +168,7 @@
 
             if (!int.TryParse(Console.ReadLine(), out number) || number % 2 != 1)
             {
-                throw new ApplicationException("Inte ett udda heltal.");
+                throw new InvalidOperationException("Inte ett udda heltal.");
             }
 
             return number;
@@ -240,7 +240,8 @@
         - Klassen <code class="remark-inline-code">StreamWriter</code> använder du för att skriva text till en fil.
 
         ```
-        using (var writer = new StreamWriter(@"..\..\MyTextFile.txt"))
+        using (var file = File.Create("MyTextFile.txt"))
+        using (var writer = new StreamWriter(file))
         {
             writer.WriteLine("Mats är");
             writer.WriteLine("snäll.");
@@ -250,12 +251,13 @@
         - Klassen <code class="remark-inline-code">StreamReader</code> använder du för att läsa en fil med text.
 
         ```
-        using (var reader = new StreamReader(@"..\..\MyTextFile.txt"))
+        using (var file = File.OpenRead("MyTextFile.txt"))
+        using (var reader = new StreamReader(file))
         {
             string line;
             while ((line = reader.ReadLine()) != null)
             {
-                WriteLine(line);
+                Console.WriteLine(line);
             }
         }
         ```
@@ -295,7 +297,8 @@
         ```
         string json;
 
-        using (var reader = new StreamReader("movies.json"))
+        using (var file = File.OpenRead("movies.json"))
+        using (var reader = new StreamReader(file))
         {
             json = reader.ReadToEnd();
         }
@@ -323,11 +326,11 @@
         movies.json
         ```
         [
-        "The Shawshank Redemption",
-        "The Godfather",
-        "The Godfather: Part II",
-        "The Dark Knight",
-        "Pulp Fiction"
+          "The Shawshank Redemption",
+          "The Godfather",
+          "The Godfather: Part II",
+          "The Dark Knight",
+          "Pulp Fiction"
         ]
         ```
 
