@@ -92,7 +92,7 @@
             return;
         }
 
-        Console.WriteLine($"Dagens namn är {DateTime.Today.ToString("dddd")}."); // Dagens namn är tisdag.
+        Console.WriteLine($"Dagens namn är {DateTime.Today.ToString("dddd")}."); // Dagens namn är fredag.
     }
     ```
 
@@ -305,9 +305,7 @@
     ```
     static void Main(string[] args)
     {
-        int odd;
-
-        if (TryParseOddInt(out odd))
+        if (TryParseOddInt(out int odd))
         {
             Console.WriteLine($"{odd} is an odd number.");
         }
