@@ -278,11 +278,11 @@
         - En signatur är metodens namn, antal parametrar och parameterdatatyper.
 
     ```
-    static void Main(string[] args)
+    static void Main()
     {
         int sum = MyMath.Add(123, 456);
-        double anotherSum = MyMath.Add(9.87, 6.54);
-        var yetAnotherSum = MyMath.Add(123, 6.54));
+        double anotherSum = Add(9.87, 6.54);
+        var yetAnotherSum = Add(123, 6.54));
     }
 
     public static int Add(int op1, int op2)
@@ -303,7 +303,7 @@
     - Genom att använda <code class="remark-inline-code">out</code> för en parameter av värdetyp kan den "göras om" till referenstyp.
 
     ```
-    static void Main(string[] args)
+    static void Main()
     {
         if (TryParseOddInt(out int odd))
         {
@@ -332,7 +332,7 @@
     - Variabel måste ha ett värde innan anrop av metod med <code class="remark-inline-code">ref</code>-parameter.
 
     ```
-    static void Main(string[] args)
+    static void Main()
     {
         int first = 3;
         int second = 42;
