@@ -27,10 +27,10 @@
 - Hur du öppnar och läser en textfil rad för rad.<br />
 - Hur du använder `using` för att automatiskt stänga en fil.
 
-**[Hur många gånger förekommer orden?](https://github.com/1dv024/exercise-frequency-of-words)** behandlar:
+**[Ordmekanikern](https://coursepress.gitbooks.io/objektorienterad-programmering-1dv024/content/ovningsuppgifter/ord-mekanikern/)** behandlar:
 
 - Filhantering.<br />
-- Användning av samlingsklassen `SortedList`.<br />
+- Användning av samlingsklassen `Dictionary`.<br />
 - Hur du använder gränssnittet (interfacet) `IDictionary`.
 
 <!--
