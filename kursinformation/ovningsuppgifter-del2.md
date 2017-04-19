@@ -10,4 +10,7 @@
 - Egenskapers get- och set-metoder som en mix av _public_ och _private_-åtkomst.
 
 
-_(Fler uppgifter är på gång...)_
+**[Personlig kontrollsiffra](https://coursepress.gitbooks.io/objektorienterad-programmering-1dv024/content/ovningsuppgifter/personlig-kontrollsiffra/)** behandlar:
+
+- Arv
+- Överskuggninig (override)
