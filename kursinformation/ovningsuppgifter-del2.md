@@ -13,5 +13,5 @@
 **[Personlig kontrollsiffra](https://coursepress.gitbooks.io/objektorienterad-programmering-1dv024/content/ovningsuppgifter/personlig-kontrollsiffra/)** behandlar:
 
 - Arv
-- Överskuggninig (override)
+- Överskuggning (override)
 - Reguljära uttryck med klassen `Regex`
