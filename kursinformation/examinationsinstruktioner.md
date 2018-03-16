@@ -42,7 +42,8 @@ Lämna in uppgiften senast inlämningstiden (se resp. examinationsuppgift) genom
 Om du efter du gjort en _"release"_ ångrar dig och vill göra förändringar så går det bra. När du gör en ny _"release"_ döper du i så fall den till v1.1 och så vidare.
 
 ## Muntlig examination
-Vid den muntliga examinationen ställs frågor som rör de delar som tagits upp i kursens teoretiska och praktiska moment hörande till den/de delar som examinationen berör. Varje examination beräknas ta 20 minuter och frågor kring den praktiska examinationsuppgiften kommer att ställas så väl som frågor kring kursens teori. En förutsättning för att göra den muntliga examinationen är följande:
+
+Vid den muntliga examinationen ställs frågor som rör de delar som tagits upp i kursens teoretiska och praktiska moment hörande till den/de delar som examinationen berör. Varje examination beräknas ta 30 minuter och frågor kring den praktiska examinationsuppgiften kommer att ställas så väl som frågor kring kursens teori. En förutsättning för att göra den muntliga examinationen är följande:
 
 1. Du har genomfört och lämnat in den praktiska examinationsuppgiften.
 2. Du har bokat en tid för den muntliga examinationen.
@@ -53,18 +54,21 @@ Se till att ha marginal före och efter din examinationstid då kursledningen in
 ***
 
 ### Campus
+
 För campusstudenter, eller distansstudenter utan tillgång till webbkamera, så genomförs examinationen på plats i Kalmar. Examinationen äger rum på kursledningens kontor och du ansvarar själv för att vara på plats vid sittgrupperna utanför ingången till Fakulteten för tekniks reception vid toppen av trappa D senast fem minuter innan utsatt examinationstid.
 
 ***
 
 ### Distans
+
 För att examineras på distans krävs följande:
 
 1. Att du har en stabil Internetuppkoppling.
-2. Att du har konto på Skype.
+2. Att du har applikationen Skype installerad.
 3. Att du har tillgång till kamera och att denna fungerar i Skype.
 
-Som distansstudent ser du till att vara online i kursens Adobe Connectrum för "Examination" senast fem minuter före utsatt tid. Skriv upp dig i listan enligt de instruktioner som ges i rummet så ringer kursledningen upp dig när det är din tur.
+Som distansstudent ser du till att vara online i kursens Slack-kanal senast fem minuter före utsatt tid. Skriv upp dig i listan enligt de instruktioner som ges i tråden så ringer kursledningen upp dig när det är din tur.
 
 ## Omexamination
+
 Möjlighet till omexamination kommer att ges. Information om omexaminationstillfällen publiceras här på kursens webbplats.
