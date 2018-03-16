@@ -4,7 +4,7 @@ Vi rekommenderar att du i första hand använder dig av <a href="https://coursep
 
 ## Prata med oss
 
-Vi rekommenderar att du i första hand använder Slack vid kontakt med oss men vi kan i undantagsfall även använda Skype. Om kursledningen är online är det bara att ringa upp <strong>ettdv024</strong> och invänta svar. Saknar du Skype och vill installera det kan du hämta programmet från <a href="http://www.skype.com/">Skype</a>.
+Vi rekommenderar att du i första hand använder Slack vid kontakt med oss men vi kan i undantagsfall även använda Skype. Om kursledningen är online är det bara att ringa upp och invänta svar. Saknar du Skype och vill installera det kan du hämta programmet från <a href="http://www.skype.com/">Skype</a>.
 
 ## Mejla oss
 
