@@ -9,3 +9,5 @@ som på inget sätt kan ersätta kurslitteraturen__.
 
 Boken är för nybörjare på programmering med C#, men innehåller även intressanta delar för den mer erfarne C#-programmeraren. 
 En utmärkt referensbok att ha i närheten av tangentbordet även efter kursens slut!
+
+(En nyare version, Essential C# 7.0, släpps 2018-05-18.)
