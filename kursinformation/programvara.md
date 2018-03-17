@@ -4,24 +4,15 @@ Oavsett vilket operativsystem du har __bör__ [Visual Studio Code](https://code.
 
 ### Tillägg till VisualStudio Code
 
-- C# for Visual Studio Code (powered by OmniSharp)
+- [C# for Visual Studio Code (powered by OmniSharp)](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
 - ([C# Extensions](https://marketplace.visualstudio.com/items?itemName=jchannon.csharpextensions))
 - ([Dotnet core commands](https://marketplace.visualstudio.com/items?itemName=matijarmk.dotnet-core-commands))
 - ([Nuget Package Manager](https://marketplace.visualstudio.com/items?itemName=jmrog.vscode-nuget-package-manager))
 
-[cp-message-box type="none" header="Är du en Windows-användare?"]
-
-Kör du Windows kan du använda [Visual Studio](https://www.visualstudio.com/vs/) Enterprise 2017, ett mer kompetent IDE än Visual Studio Code. "Fully-featured integrated development environment (IDE) for Android, iOS, Windows, web, and cloud."
-
-Som progamstudent vid en utbildning vid FTK (Fakulteten för teknik) kan du [ansöka om tillgång till Visual Studio genom Microsoft Imagine Premium](http://juno.lmatsnu.se/msdnaa). Då din ansökan behandlats och godkänts kan du hämta hem utvecklingsverktyg, operativsystem, etc.
-
-[/cp-message-box]
-
-[cp-message-box type="none" header="Är du en Mac-användare?"]
-
-Kör du Mac kan du använda Visual Studio for Mac, ett mer kompetent IDE än Visual Studio Code. "Fully-featured integrated development environment (IDE)
-for Android, iOS, macOS, web, and cloud."
-
-Som progamstudent vid en utbildning vid FTK (Fakulteten för teknik) kan du [ansöka om tillgång till Visual Studio genom Microsoft Imagine Premium](http://juno.lmatsnu.se/msdnaa). Då din ansökan behandlats och godkänts kan du hämta hem utvecklingsverktyg, operativsystem, etc.
-
-[/cp-message-box]
+> ##### Är du en Windows- eller Mac-användare?"
+>
+>- Kör du Windows kan du använda [Visual Studio Enterprise 2017](https://www.visualstudio.com/vs/). _"Fully-featured integrated development environment (IDE) for Android, iOS, Windows, web, and cloud."_
+>
+>- Kör du Mac kan du använda [Visual Studio for Mac](https://www.visualstudio.com/vs/). _"Fully-featured integrated development environment (IDE) for Android, iOS, macOS, web, and cloud."_
+>
+>Visual Studio Enterprise 2017/ Visual Studio for Mac är mer kompetenta IDE:n än Visual Studio Code och som progamstudent vid en utbildning vid FTK (Fakulteten för teknik) kan du [ansöka om tillgång till Visual Studio genom Microsoft Imagine Premium](http://juno.lmatsnu.se/msdnaa). Då din ansökan behandlats och godkänts kan du hämta hem utvecklingsverktyg, operativsystem, etc.
