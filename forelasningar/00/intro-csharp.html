@@ -56,12 +56,12 @@
             - Objektorienterat programspråk.
             - Starkt typat.
             - Baserat på C++, men liknar till stor del Java.
-            - Källkoden komipleras till CIL-kod, en sorts bytekod, som körs i en virtuell maskin, CLR (Common Language Runtime).
+            - Projekt byggs och källkoden komipleras till IL-kod (`dotnet build`), en sorts bytekod, som körs i en virtuell maskin, CoreCLR (Common Language Runtime) (`dotnet run`).
             - Plattformsoberoende (macOS, Windows, Linux x64).
         - Annat värt(?) att veta?
             - Presenterades sommaren 2000.
             - Utvecklat av Microsoft som en del av .NET-plattformen.
-                - Base Class Library (BCL), en del av Framework Class Library, innehåller det  mest grundläggande för .NET Framework.
+                - .NET Core är en implementation av .NET och körs på Windows, macOS och Linux.
             - Standardiserat (ECMA-334)
             - ...
 
@@ -79,21 +79,24 @@
 
         Program.cs
         ```
-        class Program
+        using System;
+
+        namespace Hello
         {
-            static void Main()
+            class Program
             {
-                System.Console.WriteLine("Hello, World!");
+                static void Main(string[] args)
+                {
+                    Console.WriteLine("Hello World!");
+                }
             }
         }
         ```
-        Kompilera och köra applikationen
+        Skapa, bygg och kör applikationen
         ```sh
-        >csc Program.cs
-        Microsoft (R) Visual C# Compiler version 1.1.0.51204
-        Copyright (C) Microsoft Corporation. All rights reserved.
-
-        >Program
+        > dotnet new console -o Hello
+        > cd Hello
+        > dotnet run
         Hello, World!
         ```
         ???
@@ -147,7 +150,7 @@
         ```
         class Program
         {
-            static void Main()
+            static void Main(string[] args)
             {
                 // ...
             }
