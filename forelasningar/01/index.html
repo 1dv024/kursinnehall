@@ -240,19 +240,17 @@
         - Klassen <code class="remark-inline-code">StreamWriter</code> använder du för att skriva text till en fil.
 
         ```
-        using (var file = File.Create("MyTextFile.txt"))
-        using (var writer = new StreamWriter(file))
+        using (var writer = new StreamWriter(@"MyTextFile.txt"))
         {
             writer.WriteLine("Mats är");
             writer.WriteLine("snäll.");
-        }
+        }        
         ```
 
         - Klassen <code class="remark-inline-code">StreamReader</code> använder du för att läsa en fil med text.
 
         ```
-        using (var file = File.OpenRead("MyTextFile.txt"))
-        using (var reader = new StreamReader(file))
+        using (var reader = new StreamReader(@"MyTextFile.txt"))
         {
             string line;
             while ((line = reader.ReadLine()) != null)
@@ -297,8 +295,7 @@
         ```
         string json;
 
-        using (var file = File.OpenRead("movies.json"))
-        using (var reader = new StreamReader(file))
+        using (var reader = new StreamReader("movies.json"))
         {
             json = reader.ReadToEnd();
         }
