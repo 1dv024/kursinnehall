@@ -300,7 +300,7 @@
             json = reader.ReadToEnd();
         }
 
-        var movies = JsonConvert.DeserializeObject<string[]>(json);
+        var movies = JsonConvert.DeserializeObject&lt;string[]&gt;(json);
 
         Console.WriteLine(string.Join(", ", movies));
         ```
@@ -309,7 +309,7 @@
 
         ```
         var json = File.ReadAllText("movies.json");
-        var movies = JsonConvert.DeserializeObject<List<string>>(json);
+        var movies = JsonConvert.DeserializeObject&lt;List&lt;string&gt;&gt;(json);
         Console.WriteLine(string.Join(", ", movies));
         ```
 
